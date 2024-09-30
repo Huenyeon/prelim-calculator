@@ -1,0 +1,195 @@
+@import url('https://fonts.cdnfonts.com/css/calculator');
+
+*{
+    font-family: "Calculator", sans-serif;
+}
+
+                
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(90,44,188);
+    background: linear-gradient(90deg, rgba(90,44,188,1) 0%, rgba(17,168,235,1) 52%, rgba(90,44,188,1) 98%);
+}
+
+.calcu-container{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+
+    background: rgba(220, 220, 220, 0.82);
+    border-radius:       30px;
+    box-shadow: 5px 10px 20px 5px rgba(88, 88, 88, 0.452);
+    backdrop-filter: blur(3.6px);
+    -webkit-backdrop-filter: blur(3.6px);
+    padding: 20px;
+    
+
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto auto; 
+    gap: 10px;
+    
+}
+    .screen{
+
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 14px;
+        
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(13.5px);
+        -webkit-backdrop-filter: blur(13.5px);
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        height: 100px;  
+        position: relative;
+        grid-column: span 2;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: flex-end;
+    }
+
+    .specialButtons{
+        display:flex;
+        justify-content: end;
+        padding: 5px;
+        border-radius: 20px;
+    }
+
+    .operationsAndNum{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        padding:10px;
+    }
+
+    .operationsAndNum .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero, .deciPoint{
+        background-color: #eaebed;
+        border-radius: 10px;
+        padding: 20px;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        margin: 5px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        font-size: 20px;
+    }
+    .operationsAndNum .one:hover, .two:hover, .three:hover, .four:hover, .five:hover, .six:hover, .seven:hover, .eight:hover, .nine:hover, .zero:hover, .deciPoint:hover{
+        background-color: #a4a4a4;
+        transition: 0.2s ease-in-out;
+    }
+
+    .operationsAndNum .equal, .clear, .backspace{
+        background-color: #11a8eb;
+        color: #Eaebed;
+        border-radius: 10px;
+        padding: 20px;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        margin: 5px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        font-size: 20px;
+        
+    }
+    .operationsAndNum .equal:hover, .clear:hover, .backspace:hover{
+        background-color: #05060c;
+        transition: 0.2s ease-in-out;
+        
+    }
+
+    .backspace{
+        grid-column: span 2;
+    }
+    .zero{
+        grid-column: span 2;
+    }
+
+    .operationsAndNum .plus, .minus, .multiply, .divide{
+        background-color: #05060c;
+        color: white;
+        font-size: larger;
+        border-radius: 10px;
+        padding: 20px;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        margin: 5px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        font-size: 20px;
+
+    }
+    .operationsAndNum .plus:hover, .minus:hover, .multiply:hover, .divide:hover{
+        background-color: #Eaebed;
+        transition: 0.2s ease-in-out;
+        color: #5e2acc;
+    }
+
+    .specialButtons .byeButton, .helloButton{
+        background-color: #5e2acc;
+        color: #Eaebed;
+        border-radius: 10px;
+        padding: 20px;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        margin: 5px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        margin-right: 10px; 
+    }
+
+    .specialButtons .byeButton:hover, .helloButton:hover{
+        background-color: #b399f0;
+        color: #05060c;
+        transition: 0.5s ease-in-out;
+        font-size: 20px;
+
+    }
+
+    .specialButtons .calcu-name{
+        margin-left: 10px;
+        display: flex;
+        flex-grow: 1;
+        text-align: left;
+        font-size: 30px;
+
+    }
+    .result{
+        font-size: 40px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .content{
+        align-items: flex-start;
+        display: flex;
+        font-size: 30px;
+        text-align: left;
+    }
+    
+   
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .goodbyeText{
+        animation: blink 1s 3;
+        position: relative;
+    }
+
+    .status{
+
+        position: absolute;
+        margin-right: 71%;
+        margin-top: 15%;
+        font-weight: 700;
+    }
