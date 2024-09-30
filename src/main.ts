@@ -104,11 +104,13 @@ calcuButtons.forEach((button) => {
             result.innerHTML += ("MATH ERROR!")}
 
         }
+        input.style.color = "gray"
         
         
         break
 
       default:
+        input.style.color = "black"
         const totalChar = input.innerHTML.length
         if (totalChar > 30){
           input.innerHTML+='';
