@@ -59,13 +59,16 @@ body{
         display:flex;
         justify-content: end;
         padding: 5px;
+        margin-top: 10px;
         border-radius: 20px;
+
     }
 
     .operationsAndNum{
         display: grid;
         grid-template-columns: repeat(5,1fr);
         padding:10px;
+
     }
 
     .operationsAndNum .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero, .deciPoint{
@@ -190,9 +193,17 @@ body{
     }
 
     .status{
-
+        background-color: rgba(242, 242, 242, 0.76);
         position: absolute;
-        margin-right: 71%;
-        margin-top: 15%;
+        margin-right: 68%;
+        margin-top:-20px;
         font-weight: 700;
+        padding: 10px;
+        background: rgba(213, 213, 213, 0.269);
+        color: rgb(76, 76, 76);
+
+        border-radius: 6px;
+        border: 2px solid #9ac6dc
+
+    
     }
