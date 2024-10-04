@@ -23,10 +23,9 @@ const parent = document.getElementById("operationsAndNum") as HTMLDivElement; //
 const buttons = parent?.querySelectorAll("div") as NodeListOf<HTMLDivElement>; //gets children div of parent div
 const calcuButtons = Array.from(buttons); //turn buttons into array
 
-//additional
+//additional design
 const status = document.getElementById("status") as HTMLDivElement;
 
-//additional design for better ux
 status.innerHTML = `Power: ${calculator.isOn ? "ON" : "OFF"}`;
 
 function updateStatus() {
